@@ -7,7 +7,7 @@ namespace EmployeeWage
         public const int isFullTime = 0;
         public const int isPartTime = 1;
         public const int WagePerHour = 20;
-        public const int days = 20;
+        public const int totalHours = 100;
         static void Main(string[] args)
         {
             int emphr;
@@ -20,13 +20,13 @@ namespace EmployeeWage
             {
                 case isFullTime:
                     emphr = 8;
-                    wage = emphr * WagePerHour;
-                    Console.WriteLine("Employee is FullTime and Wage for Month is " + (emphr * wage));
+                    wage = totalHours * WagePerHour;
+                    Console.WriteLine("Employee is FullTime and Wage is " + (emphr * wage));
                     break;
                 case isPartTime:
                     emphr = 4;
-                    wage = emphr * WagePerHour;
-                    Console.WriteLine("Employee is PartTime and Wage for Month is " + (emphr * wage));
+                    wage = totalHours * WagePerHour;
+                    Console.WriteLine("Employee is PartTime and Wage is " + (emphr * wage));
                     break;
                 default:
                     emphr = 0;
