@@ -6,18 +6,27 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            int EmpPresent = 1;
+            int isPartTime = 1;
+            int wagePerHour = 20;
+            int empHr;
+            int dailyWage;
 
             Random random = new Random();
             int value = random.Next(0, 2);
 
-            if (value == EmpPresent)
+            if (value == isPartTime)
             {
-                Console.WriteLine("Employee is Present");
+                empHr = 8;
+                Console.WriteLine("Employee is Full Time");
+                dailyWage = empHr * wagePerHour;
+                Console.WriteLine("Employee Wage is " + dailyWage);
             }
             else
             {
-                Console.WriteLine("Employee is Absent");
+                empHr = 4;
+                Console.WriteLine("Employee is Part Time");
+                dailyWage = empHr * wagePerHour;
+                Console.WriteLine("Employee Wage is " +dailyWage);
             }
         }
     }
