@@ -7,6 +7,9 @@ namespace EmployeeWage
         static void Main(string[] args)
         {
             int EmpPresent = 1;
+            int wagePerHour = 20;
+            int empHr = 8;
+            int dailyWage;
 
             Random random = new Random();
             int value = random.Next(0, 2);
@@ -14,10 +17,8 @@ namespace EmployeeWage
             if (value == EmpPresent)
             {
                 Console.WriteLine("Employee is Present");
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
+                dailyWage = empHr * wagePerHour;
+                Console.WriteLine("Employee Wage is " + dailyWage);
             }
         }
     }
